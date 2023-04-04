@@ -93,22 +93,3 @@ display_letter:
 	pop  ax
 	ret                 
 	
-                      ; Lese Keyboard in das Register AL
-	
-read_keyboard:
-	push bx
-	push cx
-	push dx
-	push si
-	push di
-	mov  ah, 0x00       ; Lade AH mit code um Keyboard zu lesen
-	int  0x16
-	pop  di
-	pop  si
-	pop  dx
-	pop  cx
-	pop  bx
-	ret                 
-	
-	
-	
